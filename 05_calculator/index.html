@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+        }
+        /* h1{
+            color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif; 
+        }
+        */
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            background: #3a6157;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .calculator{
+            background-color: #1c1c1e;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .calculator form input{
+            border: 0;
+            outline: 0;
+            width: 55px;
+            height: 60px;
+            border-radius: 50px;
+            background:  #1c1c1e;
+            font-size: 20px;
+            color: #fff;
+            cursor: pointer;
+            margin: 2px;
+        }
+        form .display{
+            display: flex;
+            justify-content: flex-end;
+            margin: 20px 0;
+        }
+        form .display input{
+            text-align: right;
+            flex: 1;
+            border-radius: 0%;
+            font-size: 45px;
+            box-shadow: none;
+        }
+
+         
+          
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <!-- <h1>Calculator</h1> -->
+            <form >
+                <div class="display">
+                    <input type="text" name="display">
+                </div>
+                <div>
+                    <input type="button" value="⌫" class="brown" style="background-color: #d4d4d2; color: #000;" onclick="display.value = '' ">
+                    <input type="button" value="C" class="brown" style="background-color: #d4d4d2; color: #000;" onclick="display.value = display.value.toString().slice(0,-1)">
+                    <input type="button" value="% "class="brown" style="background-color: #d4d4d2; color: #000;" onclick="display.value += '%'">
+                    <input type="button" value="÷" class="orange" style="background-color: #ff9500;" onclick="display.value += '/'">
+                </div>
+                <div>
+                    <input type="button" value="7" class="none" style="background-color: #505050;" onclick="display.value += '7'">
+                    <input type="button" value="8" class="none" style="background-color: #505050;" onclick="display.value += '8'">
+                    <input type="button" value="9" class="none" style="background-color: #505050;" onclick="display.value += '9'">
+                    <input type="button" value="×" class="orange" style="background-color: #ff9500;" onclick="display.value += '*'">
+                </div>
+                <div>
+                    <input type="button" value="4" class="none" style="background-color: #505050;" onclick="display.value += '4'">
+                    <input type="button" value="5" class="none" style="background-color: #505050;" onclick="display.value += '5'">
+                    <input type="button" value="6" class="none" style="background-color: #505050;" onclick="display.value += '6'">
+                    <input type="button" value="-" class="orange" style="background-color: #ff9500;" onclick="display.value += '-'">
+                </div>
+                <div>
+                    <input type="button" value="1" class="none" style="background-color: #505050;" onclick="display.value += '1'">
+                    <input type="button" value="2" class="none" style="background-color: #505050;" onclick="display.value += '2'">
+                    <input type="button" value="3" class="none" style="background-color: #505050;" onclick="display.value += '3'">
+                    <input type="button" value="+" class="orange" style="background-color: #ff9500;" onclick="display.value += '+'">
+                </div>
+                <div>
+                    <input type="button" value="+/-" class="none" style="background-color: #505050;" onclick="display.value = '-'">
+                    <input type="button" value="0" class="none" style="background-color: #505050;" onclick="display.value += '0'">
+                    <input type="button" value="." class="none" style="background-color: #505050;" onclick="display.value += '.'">
+                    <input type="button" value="=" class="orange" style="background-color: #ff9500;" onclick="display.value = eval(display.value)">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
